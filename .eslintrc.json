@@ -1,0 +1,27 @@
+{
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+  "extends": "airbnb",
+  "rules": {
+    "no-console": "off",
+    "no-constant-condition": "off",
+    "arrow-parens": ["error", "always"],
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/label-has-for": "off",
+    "react/no-danger": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-string-refs": "off",
+    "react/require-extension": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+    "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
+    "react/no-unused-prop-types": ["error", { "skipShapeProps": true }]
+  },
+    "plugins": [
+        "react"
+    ]
+}
