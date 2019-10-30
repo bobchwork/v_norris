@@ -50,10 +50,20 @@
     &__content {
       &--menu {
         a {
-          width: 100%;
+          cursor: pointer;
+          width: calc(100% - 20px);
           float: left;
           padding: 10px 0px;
+          padding-left: 20px;
           text-decoration: none;
+          &:last-child {
+            padding-bottom: 20px;
+            &:hover {
+              submenu {
+                display: block
+              }
+            }
+          }
         }
       }
     }

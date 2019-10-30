@@ -12,7 +12,6 @@ const HeaderMenu = () => {
       <a href="/">SONDERANGEBOTE</a>
       <a href="/">
         MEIN BEREICH
-        <img src="/images/path-down.png" alt="mein berich" />
       </a>
     </>
   );
