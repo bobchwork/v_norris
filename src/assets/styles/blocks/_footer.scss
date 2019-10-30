@@ -1,0 +1,44 @@
+.footer {
+  width: 100%;
+  background: url($footerBgImagePath) no-repeat;
+  background-size: cover;
+  min-height: 194px;
+  padding-top: 61px;
+  margin-top: 57px;
+
+  &__message {
+    color: $whiteTwo;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__submit {
+    color: $primaryColor;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    cursor: pointer;
+
+    h3 {
+      margin-top: 13px;
+      max-width: 20vw
+    }
+
+    img {
+      width: 21px;
+      height: 14px;
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-cutoff) {
+  .footer {
+    position: relative;
+    padding: 20px 0;
+
+    &__message, &__submit {
+      margin-left: 10px
+    }
+  }
+}

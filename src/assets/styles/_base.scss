@@ -1,0 +1,41 @@
+body {
+  font-family: $regular;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  color: $primaryColor;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+h2 {
+  color: $lightBlack;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+a {
+  color: $linkColor;
+}
+
+input {
+  color: $inputTextColor;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  outline: none;
+}

@@ -1,0 +1,130 @@
+.card {
+  min-height: 264px;
+  border-radius: 2px;
+  border: solid 1px $whiteThree;
+  background-color: $whiteTwo;
+  padding: 17px;
+  display: block;
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    transition: display .5s;
+    display: block;
+  }
+
+  &--triangle-right,
+  &--triangle-left {
+    margin-top: 40px;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: -10px;
+      border-top: none;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid $whiteTwo;
+    }
+  }
+
+  &--triangle-right {
+    &:after {
+      right: 30px;
+    }
+
+  }
+
+  &--triangle-left {
+    &:after {
+      left: 30px;
+    }
+  }
+
+  &__content {
+
+    max-height: 269px;
+    overflow: auto;
+    &--display {
+     max-height: 400px;
+    }
+  }
+
+  &__custom-menu-content {
+    a {
+      color: $linkColor;
+      font-size: 14px;
+      border-bottom: solid 1px $lightGray;
+      float: left;
+      width: 100%;
+      font-weight: normal;
+      padding: 8px;
+      &:hover {
+        color: $primaryColor;
+        background: none;
+        font-weight: 600;
+      }
+      &:last-child {
+        border: 0px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &--messagebox,
+  &--menu {
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+    width: 100%;
+    position: absolute;
+    float: left;
+    padding: 0px 20px 0;
+  }
+
+  &--messagebox {
+    max-width: 458px;
+    max-height: 500px;
+    padding: 20px;
+    z-index: 4000;
+    float: left;
+    margin-left: -20px;
+  }
+
+  &--menu {
+    max-width: 222px;
+    min-height: unset;
+    padding: 20px;
+    position: absolute;
+    float: right;
+    right: 0;
+    height: auto;
+  }
+
+  &--simple {
+    max-width: 360px;
+    max-height: 264px;
+    margin: 34px auto auto;
+    &:hover {
+      box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &--dislpay {
+    height: 369px;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  @media screen and (max-width: $desktop-cutoff) {
+    height: 400px;
+    &--simple {
+      margin: 34px auto auto;
+    }
+    &--display {
+      margin: auto;
+      width: 85%;
+    }
+  }
+}
+
+

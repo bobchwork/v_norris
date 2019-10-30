@@ -1,0 +1,63 @@
+.joke-stat-content {
+  max-height: 287px;
+  height: 100%;
+  width: 100%;
+
+  &__category {
+    float: left;
+    width: 100%;
+  }
+
+  &__title {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+  }
+  &__title-text {
+    float: left;
+    width: 395px;
+    display: flex;
+    align-items: baseline;
+  }
+  &__number {
+    display: flex;
+    align-items: baseline;
+    width: calc(100% - 395px);
+    color: $primaryColor;
+    font-weight: 600;
+    font-size: 14px;
+    span {
+      float: right;
+      width: 70px;
+      padding-left: 5px;
+      text-align: right;
+    }
+  }
+
+  &__divider {
+    border-bottom: 1px solid $primaryColor;
+    float: left;
+    height: 80%;
+    width: calc(100% - 60px);
+  }
+
+  &__wrapper {
+    width: 100%;
+    min-height: 90px;
+    float: left;
+  }
+
+  &__joke-position {
+    color: $primaryColor;
+    font-weight: 600;
+  }
+
+  &__description {
+    float: left;
+    width: 100%;
+    min-height: 189px;
+    max-height: 300px;
+    overflow: auto;
+  }
+}

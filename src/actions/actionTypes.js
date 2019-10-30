@@ -1,1 +1,11 @@
-export const GET_USER = 'user/GET_USER';
+export const UPDATE_SELECTED_CATEGORY = 'jokes/UPDATE_SELECTED_CATEGORY';
+export const GET_CATEGORIES = 'jokes/GET_CATEGORIES';
+export const GET_ALL_JOKES = 'jokes/GET_ALL_JOKES';
+export const GET_ALL_JOKES_REJECTED = 'jokes/GET_ALL_JOKES_REJECTED';
+export const GET_ALL_JOKES_FULFILLED = 'jokes/GET_ALL_JOKES_FULFILLED';
+export const GET_CATEGORIES_FULFILLED = 'jokes/GET_CATEGORIES_FULFILLED';
+export const GET_CATEGORY_REJECTED = 'jokes/GET_CATEGORY_REJECTED';
+export const GET_JOKE = 'jokes/GET_JOKE';
+export const UPDATE_VOTES = 'jokes/UPDATE_VOTES';
+export const FILTER_CATEGORY = 'jolkes/FILTER_CATEGORY';
+export const VIEW_MORE = 'jolkes/VIEW_MORE';

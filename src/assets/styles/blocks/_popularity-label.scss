@@ -1,0 +1,36 @@
+.popularity-label {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-weight: 600;
+
+
+  &--trending {
+    color: $trending;
+  }
+
+  &--new-in-town {
+    color: $newInTown;
+  }
+
+  &--chesnut {
+    color: white;
+    background: $chesnutBg;
+  }
+
+  &--hall-of-fame {
+    color: $hallOfFame;
+  }
+
+  &--right {
+    float: right;
+  }
+
+  &--left {
+    float: left;
+  }
+
+
+
+}

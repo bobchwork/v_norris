@@ -1,0 +1,150 @@
+.joke-button {
+  width: 206px;
+  height: 48px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: white;
+
+  &:hover {
+    -webkit-transition: background-color .5s; /* Safari prior 6.1 */
+    transition: background-color .5s;
+    background-color: $primaryColor;
+  }
+
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    float: right;
+  }
+
+  &__icon {
+    float: right;
+    width: 11px;
+    height: 16px;
+
+    &--left {
+      float: left;
+    }
+  }
+  &__title {
+    width: 195px;
+
+    &--has-icon {
+      padding-left: 11px;
+    }
+  }
+
+  &--border {
+    border: none;
+    border: solid 1px $buttonBorder;
+  }
+
+  &--back-button {
+    width: 62px;
+    height: 61px;
+    background-color: #303030;
+  }
+
+  &--joke-nav {
+    width: 130px;
+    margin-top: 55px;
+  }
+
+  &--page-button,
+  &--unknown,
+  &--all,
+  &--joke-nav {
+    color: $primaryColor;
+    border: solid 1px $buttonBorder;
+    &:hover {
+      -webkit-transition: background-color .5s; /* Safari prior 6.1 */
+      transition: background-color .5s;
+      background-color: transparent;
+    }
+  }
+
+  &--animal {
+    background-color: $animal;
+  }
+
+  &--career {
+    background-color: $career;
+  }
+
+  &--celebrity {
+    background-color: $celebrity;
+  }
+
+  &--dev {
+    background-color: $dev;
+  }
+
+  &--explicit {
+    background-color: $explicit;
+  }
+
+  &--fashion {
+    background-color: $fashion;
+  }
+
+  &--food {
+    background-color: $food;
+  }
+
+  &--history {
+    background-color: $history;
+  }
+
+  &--money {
+    background-color: $money;
+  }
+
+  &--movie {
+    background-color: $movie;
+  }
+
+  &--music {
+    background-color: $music;
+  }
+
+  &--political {
+    background-color: $political;
+  }
+
+  &--science {
+    background-color: $science;
+  }
+
+  &--religion {
+    background-color: $religion;
+  }
+
+  &--sport {
+    background-color: $sport;
+  }
+
+  &--travel {
+    background-color: $travel;
+  }
+}
+@media screen and (max-width: $desktop-cutoff) {
+  .joke-button {
+    margin: auto;
+    &--all {
+      margin: auto;
+      display: block;
+    }
+  }
+
+}

@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import connect from 'react-redux/es/connect/connect';
+import Footer from './components/Common/Footer';
+import Header from './components/Common/Header';
+import AllJokesContainer from './containers/AllJokesContainer';
+import SingleJokeContainer from './containers/SingleJokeContainer';
 
-function App() {
+const proptypes = {
+  jokes: PropTypes.array,
+};
+
+const defaultProps = {
+  jokes: [],
+};
+
+const App = (props) => {
+  const { jokes } = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="page-container">
+        <Header jokes={jokes} />
+        <div className="container container--full">
+          <Switch>
+            <Route path="/joke/:id" component={SingleJokeContainer} />
+            <Route path="/" component={AllJokesContainer} />
+          </Switch>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
-export default App;
+App.propTypes = proptypes;
+App.defaultProps = defaultProps;
+
+export default connect(
+  (state) => ({
+    isLoading: state.isLoading,
+    selectedCategory: state.jokes.selectedCategory,
+    jokes: state.jokes.list,
+  }),
+  {},
+)(App);

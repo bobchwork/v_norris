@@ -1,0 +1,70 @@
+// fonts
+$regular: 'Monserat', sans-serif;
+
+// colors per category
+$primaryColor: #BADA55;
+$animal: #ff5b5b;
+$career: #ff915b;
+$celebrity: #ffbe5b;
+$dev: #ffdf5b;
+$explicit: #8fe360;
+$fashion: #57e690;
+$food: #963b25;
+$history: #57dbe6;
+$money: #e397e6;
+$movie: #e6c206;
+$music: #d8e635;
+$political: #57dbe6;
+$religion: #e67964;
+$science: #478ebf;
+$sport: #c27de6;
+$travel: #7d7ee6;
+
+// colors
+$primaryColor: #cfb995;
+$secondaryColor: #313131;
+$white: #f9f9f9;
+$whiteTwo: #f9f9f9;
+$whiteThree: #ecebe9;
+$lightBlack: #303030;
+$lightGray: #b2b2b2;
+
+// site colors
+$bgColor: $whiteTwo;
+$headerBgColor: $lightBlack;
+$titleTextColor: $primaryColor;
+$btnTextColor: $primaryColor;
+$dividerColor: $whiteThree;
+$borderColor: $whiteThree;
+
+// links
+$linkColor: $secondaryColor;
+$navLinkHoverBgColor: $primaryColor;
+
+// buttons
+$downBtnColor: #ff3750;
+$upBtnColor: #68b680;
+$backBtnColor: $lightBlack;
+$inputTextColor: $lightGray;
+$buttonBorder: #d1bb91;
+$voteLike: #68b680;
+$voteLikeHover: #46915d;
+$voteDislike: #ff3750;
+$voteDislikeHover: #ce2c40;
+
+//labels
+$trending: #f3a536;
+$hallOfFame: #f33636;
+$newInTown: #36aef3;
+$chesnutBg: #000;
+
+//static images accessed inside of src from styles
+$mainBgImagePath: '../../images/main-bg.png';
+$footerBgImagePath: '../../images/footer-bg.png';
+$navbuttonBg: '../../images/navbutton-bg.svg';
+$redLight: '../../images/red-light.svg';
+$blueLight: '../../images/blue-light.svg';
+$orangeLight: '../../images/orange-light.svg';
+
+$desktop-cutoff: 840px;
+

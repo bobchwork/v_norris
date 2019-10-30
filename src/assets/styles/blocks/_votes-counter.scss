@@ -1,0 +1,19 @@
+.votes-counter {
+  margin-left: 17px;
+  min-height: 104px;
+  &__button-wrapper {
+    margin-top: 17px;
+    float: left;
+    &--left {
+      padding-right: 30px;
+    }
+  }
+  @media screen and (max-width: $desktop-cutoff) {
+    width: 115px;
+    margin: auto;
+    &__button-wrapper {
+      margin-top: 25px;
+    }
+  }
+
+}

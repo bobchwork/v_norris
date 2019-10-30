@@ -1,0 +1,20 @@
+.header {
+  width: 100%;
+  min-height: 320px;
+  background: url('../../images/main-bg.png') no-repeat;
+  background-size: cover;
+  text-align: center;
+  .header__title {
+    font-weight: normal;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+  }
+  .header__subtitle {
+    padding-top: 5px;
+    margin-top: 0;
+    font-weight: 600;
+    line-height: 32px;
+    color: $whiteTwo;
+  }
+
+}

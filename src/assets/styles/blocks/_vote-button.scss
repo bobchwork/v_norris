@@ -1,0 +1,40 @@
+.vote-button {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  background-color: $voteLike;
+  color: $voteLike;
+  height: 40px;
+  width: 40px;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    -webkit-transition: background-color .5s; /* Safari prior 6.1 */
+    transition: background-color .5s;
+    background-color: $voteLikeHover;
+  }
+
+  &--dislike {
+    background-color: $voteDislike;
+    color: $voteDislike;
+    &:hover {
+      -webkit-transition: background-color .5s; /* Safari prior 6.1 */
+      transition: background-color .5s;
+      background-color: $voteDislikeHover;
+    }
+  }
+
+  &__hand {
+    margin: 7px auto auto;
+    &--dislike {
+      margin-top: 10px;
+    }
+  }
+
+  &__count {
+    margin-top: 8px;
+  }
+
+}

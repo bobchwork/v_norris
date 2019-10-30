@@ -1,0 +1,9 @@
+.navigation-buttons{
+  float: right;
+  width: 278px;
+  min-height: 104px;
+  @media screen and (max-width: $desktop-cutoff) {
+    float: none;
+    margin: auto;
+  }
+}

@@ -1,0 +1,95 @@
+.joke-label {
+  margin-top: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  max-width: 180px;
+  float:left;
+  height: 18px;
+  border-radius: 11px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px 10px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 12px;
+    span {
+      font-size: 15px;
+      padding-right: 5px;
+    }
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--animal {
+    background-color: $animal;
+  }
+
+  &--career {
+    background-color: $career;
+  }
+
+  &--celebrity {
+    background-color: $celebrity;
+  }
+
+  &--dev {
+    background-color: $dev;
+  }
+
+  &--explicit {
+    background-color: $explicit;
+  }
+
+  &--fashion {
+    background-color: $fashion;
+  }
+
+  &--food {
+    background-color: $food;
+  }
+
+  &--history {
+    background-color: $history;
+  }
+
+  &--money {
+    background-color: $money;
+  }
+
+  &--movie {
+    background-color: $movie;
+  }
+
+  &--music {
+    background-color: $music;
+  }
+
+  &--political {
+    background-color: $political;
+  }
+
+  &--science {
+    background-color: $science;
+  }
+
+  &--religion {
+    background-color: $religion;
+  }
+
+  &--sport {
+    background-color: $sport;
+  }
+
+  &--travel {
+    background-color: $travel;
+  }
+}

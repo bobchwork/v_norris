@@ -1,0 +1,54 @@
+.search-box {
+
+  margin: 45px auto auto;
+  max-width: 458px;
+  padding: 14px 16px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: $whiteTwo 1px solid;
+  height: 20px;
+
+  &--focused {
+    background-color: white;
+    transition: all .5s;
+  }
+
+  &--unfocused {
+    background-color: transparent;
+    transition: all .5s;
+  }
+
+  &__input-field {
+    width: 90%;
+    float: left;
+  }
+
+  &__button {
+    min-width: 24px;
+    width: 10%;
+    float: right;
+    img {
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  &__box-list-container {
+/*    margin-top: 60px;
+    max-width: 458px;
+    height: 200px;
+    overflow: hidden;*/
+
+  }
+
+  &__form {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: $desktop-cutoff) {
+  .search-box {
+    width: 80%;
+  }
+}
+

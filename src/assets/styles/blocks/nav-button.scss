@@ -1,0 +1,19 @@
+.nav-button {
+  width: 62px;
+  height: 61px;
+  background: url($navbuttonBg) no-repeat center;
+  margin-top: 46px;
+  margin-bottom: 48px;
+
+
+  &--back {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 10px;
+      height: 18px;
+      margin-left: 22px;
+    }
+  }
+}

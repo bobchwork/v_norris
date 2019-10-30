@@ -1,13 +1,23 @@
-@import "variables.scss";
-
-h1, h2 {
-  color: $primaryColor;
-}
-
-header {
-  p {
-    color: $primaryColor;
-  }
-
-}
-
+@import "variables";
+@import "layout";
+@import "base";
+// blocks
+@import "blocks/header-menu";
+@import "blocks/header";
+@import "./blocks/main-navigation";
+@import "./blocks/search-box";
+@import "./blocks/input-field";
+@import "blocks/joke-button";
+@import "./blocks/category-filter";
+@import "./blocks/card";
+@import "./blocks/joke-label";
+@import "./blocks/joke-content";
+@import "blocks/joke-stat-content";
+@import "blocks/popularity-label";
+@import "blocks/votes-counter";
+@import "blocks/navigation-buttons";
+@import "./blocks/list";
+@import "./blocks/nav-button";
+@import "./blocks/vote-button";
+@import "./blocks/cards";
+@import "./blocks/footer";

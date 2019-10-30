@@ -1,0 +1,61 @@
+.list {
+  padding: 32px;
+  &__link {
+    padding: 5px;
+    &--search {
+      text-align: left;
+      padding: 15px;
+      border-bottom: $borderColor 1px solid;
+      a {
+        &:before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          padding: 0 10px;
+          background: url($blueLight) no-repeat;
+        }
+        color: $lightGray;
+        text-decoration: none !important;
+      }
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &__content {
+    &--menu {
+      a {
+        border-bottom: solid 1px $lightBlack;
+      }
+    }
+
+  }
+  &--display {
+  }
+  &--display,
+  &--search {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+    background: white;
+    resize: horizontal;
+  }
+  @media screen and (max-width: $desktop-cutoff) {
+    &__content {
+      &--menu {
+        a {
+          width: 100%;
+          float: left;
+          padding: 10px 0px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

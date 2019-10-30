@@ -1,0 +1,30 @@
+.cards {
+  min-height: 264px;
+  margin-top: 0;
+  border-top: $borderColor solid 1px;
+  width: 100%;
+  padding: 0;
+
+  &__content {
+    margin-top: 45px;
+    min-height: 264px;
+  }
+  &__more-button {
+    margin-bottom: 58px;
+    margin-top: 64px;
+    button {
+      margin: auto;
+    }
+  }
+
+  &__message {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: $desktop-cutoff) {
+    &__content {
+      padding: 10px !important;
+    }
+  }
+}
+
