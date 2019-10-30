@@ -3,6 +3,11 @@
   height: 100%;
   width: 100%;
 
+  p {
+    width: 95%;
+    margin: auto;
+  }
+
   &__category {
     float: left;
     width: 100%;
@@ -29,7 +34,7 @@
     font-size: 14px;
     span {
       float: right;
-      width: 70px;
+      width: 75px;
       padding-left: 5px;
       text-align: right;
     }
@@ -39,7 +44,7 @@
     border-bottom: 1px solid $primaryColor;
     float: left;
     height: 80%;
-    width: calc(100% - 60px);
+    width: calc(100% - 80px);
   }
 
   &__wrapper {
@@ -56,8 +61,25 @@
   &__description {
     float: left;
     width: 100%;
-    min-height: 189px;
-    max-height: 300px;
-    overflow: auto;
+    overflow-y: auto;
+  }
+  @media screen and (max-width: $desktop-cutoff) {
+    &__title,
+    &__number,
+    &__title-text {
+      width: 100%;
+      float: left;
+      display: block;
+    }
+    &__divider {
+      float:left;
+      height: 14px;
+    }
+    &__description {
+      margin-top: 30px;
+    }
+    p {
+      min-height: 200px;
+    }
   }
 }

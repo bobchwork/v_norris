@@ -14,10 +14,9 @@
 
   &__description {
     height: 50%;
-    max-height: 100%;
+    height: 150px ;
     color: $lightBlack;
     overflow: auto;
-
   }
   &__stat-link {
     height: 10%;

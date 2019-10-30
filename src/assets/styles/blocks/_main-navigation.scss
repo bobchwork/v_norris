@@ -21,7 +21,9 @@
   &__submenu-container {
     background: green !important;
     &:hover {
-      .main-navigation__dropdown-content {display: block;}
+      .main-navigation__dropdown-content {
+        display: block;
+      }
     }
   }
   &__mobile {
@@ -53,13 +55,15 @@
       z-index: 1;
     }
   }
-}
-
-@media screen and (max-width: $desktop-cutoff) {
-  .main-navigation {
+  @media screen and (max-width: $desktop-cutoff) {
     &__mobile-menu-content {
-      padding-bottom: 30px;
       display: none;
+      margin-top: 20px;
+      padding-bottom: 0;
+      a {
+        padding-left: 20px;
+        width: calc(100% - 30px);
+      }
       &--show {
         display: block;
       }
@@ -86,5 +90,5 @@
       padding: 10px 10px;
     }
   }
-}
 
+}

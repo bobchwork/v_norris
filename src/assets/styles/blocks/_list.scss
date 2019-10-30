@@ -1,5 +1,6 @@
 .list {
   padding: 32px;
+  z-index: 500000;
   &__link {
     padding: 5px;
     &--search {
@@ -31,8 +32,6 @@
     }
 
   }
-  &--display {
-  }
   &--display,
   &--search {
     width: 300px;
@@ -47,6 +46,7 @@
     resize: horizontal;
   }
   @media screen and (max-width: $desktop-cutoff) {
+    padding: 0;
     &__content {
       &--menu {
         a {

@@ -19,7 +19,6 @@ const Header = (props) => (
       <h2 className="header__subtitle">Daily Laughs for you and yours</h2>
       <SearchBox
         jokes={props.jokes}
-        onChange={props.onChange}
         placeholder="How can we make you laugh today?"
       />
     </div>

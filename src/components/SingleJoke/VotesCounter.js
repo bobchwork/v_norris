@@ -8,7 +8,6 @@ const proptypes = {
   dislikes: PropTypes.number,
 };
 const defaultProps = {
-
   handleClick: () => {
   },
   likes: 0,

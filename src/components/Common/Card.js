@@ -21,8 +21,6 @@ const defaultProps = {
   trianglePosition: 'right',
   hide: false,
   onMouseCardLeave: () => {},
-
-
 };
 
 const Card = (props) => {

@@ -31,6 +31,13 @@
     float: left;
   }
 
+  @media screen and (max-width: $desktop-cutoff) {
+    float: left;
+    width: 90%;
+    display: block;
+    margin-top: 20px;
+  }
+
 
 
 }

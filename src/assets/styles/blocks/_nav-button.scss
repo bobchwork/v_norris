@@ -5,6 +5,9 @@
   margin-top: 46px;
   margin-bottom: 48px;
 
+  &__back-mb-button {
+    display: none;
+  }
 
   &--back {
     display: flex;
@@ -14,6 +17,16 @@
       width: 10px;
       height: 18px;
       margin-left: 22px;
+    }
+  }
+
+  @media screen and (max-width: $desktop-cutoff) {
+    &--back {
+      display: none;
+    }
+    &__back-mb-button {
+      display: block;
+      margin: 40px 20px auto;
     }
   }
 }

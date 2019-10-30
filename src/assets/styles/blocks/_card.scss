@@ -2,7 +2,7 @@
   min-height: 264px;
   border-radius: 2px;
   border: solid 1px $whiteThree;
-  background-color: $whiteTwo;
+  background-color: $white;
   padding: 17px;
   display: block;
 
@@ -47,7 +47,7 @@
     max-height: 269px;
     overflow: auto;
     &--display {
-     max-height: 400px;
+     max-height: 369px;
     }
   }
 
@@ -123,6 +123,16 @@
     &--display {
       margin: auto;
       width: 85%;
+      height: auto;
+    }
+    &--messagebox {
+      max-width: 250px;
+      max-height: 275px;
+    }
+    &__content {
+      &--display {
+        max-height: 600px;
+      }
     }
   }
 }

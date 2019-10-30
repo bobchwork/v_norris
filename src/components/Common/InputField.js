@@ -14,7 +14,6 @@ const proptypes = {
 const defaultProps = {
   name: '',
   type: '',
-  inputValue: '',
   placeholder: '',
   onFocus: () => {
   },
@@ -29,7 +28,6 @@ const InputField = (props) => {
     type,
     placeholder,
     name,
-    inputValue,
     onChange,
     onFocus,
     onFocusOut,
@@ -39,7 +37,6 @@ const InputField = (props) => {
     <div className="input-field">
       <input
         type={type}
-        value={inputValue}
         placeholder={placeholder}
         name={name}
         onChange={onChange}
