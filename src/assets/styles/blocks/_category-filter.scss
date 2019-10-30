@@ -27,6 +27,10 @@
         flex: none !important;
         width: 100% !important;
       }
+      &:last-child {
+        display: block;
+        margin: auto;
+      }
       &--show {
         display: block;
       }

@@ -17,12 +17,16 @@ const CategoryFilter = (props) => {
       'category-filter__category-button': true,
       'category-filter__category-button--show': showCategories,
     });
+    const chooseAndClose = (category) => {
+      handleOnClick(category);
+      toggleCategories(!showCategories);
+    };
     return (
       <div className={buttonClass} key={k}>
         <Button
           buttonType={category}
           title={category}
-          handleOnClick={() => (handleOnClick(category))}
+          handleOnClick={() => (chooseAndClose(category))}
           categoryList={categoryList}
         />
       </div>
