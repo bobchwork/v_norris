@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Common/Button';
-import cx from 'classnames';
 
 const proptypes = {
   type: PropTypes.string,
