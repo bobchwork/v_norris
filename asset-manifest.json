@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/v_norris/static/css/main.3738920d.chunk.css",
+    "main.js": "/v_norris/static/js/main.a4c27924.chunk.js",
+    "main.js.map": "/v_norris/static/js/main.a4c27924.chunk.js.map",
+    "runtime-main.js": "/v_norris/static/js/runtime-main.5f0bf96d.js",
+    "runtime-main.js.map": "/v_norris/static/js/runtime-main.5f0bf96d.js.map",
+    "static/js/2.088ef72a.chunk.js": "/v_norris/static/js/2.088ef72a.chunk.js",
+    "static/js/2.088ef72a.chunk.js.map": "/v_norris/static/js/2.088ef72a.chunk.js.map",
+    "index.html": "/v_norris/index.html",
+    "precache-manifest.208f172452ad4e9ebf9bcd4cd54b08f2.js": "/v_norris/precache-manifest.208f172452ad4e9ebf9bcd4cd54b08f2.js",
+    "service-worker.js": "/v_norris/service-worker.js",
+    "static/css/main.3738920d.chunk.css.map": "/v_norris/static/css/main.3738920d.chunk.css.map",
+    "static/media/index.scss": "/v_norris/static/media/navbutton-bg.212cfdfd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5f0bf96d.js",
+    "static/js/2.088ef72a.chunk.js",
+    "static/css/main.3738920d.chunk.css",
+    "static/js/main.a4c27924.chunk.js"
+  ]
+}
