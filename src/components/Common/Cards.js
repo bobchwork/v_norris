@@ -33,7 +33,7 @@ const Cards = (props) => {
       <JokeContent
         description={cardContent.value}
         title={category[0]}
-        icon="/images/green-light.png"
+        icon={`${process.env.REACT_APP_BASE_PATH}/images/green-light.png`}
         id={cardContent.id}
       />
     );
@@ -76,7 +76,7 @@ const Cards = (props) => {
           <Button
             handleOnClick={viewMoreFunction}
             title="View More"
-            iconPath="/images/arrow-d.png"
+            iconPath={`${process.env.REACT_APP_BASE_PATH}/images/arrow-d.png`}
           />
         </div>
       )}

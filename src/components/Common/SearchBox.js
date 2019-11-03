@@ -33,8 +33,8 @@ const SearchBox = (props) => {
 
   const [jokesList, setJokes] = useState([]);
   const images = {
-    white: '/images/search.png',
-    black: '/images/search-b.png'
+    white: `${process.env.REACT_APP_BASE_PATH}/images/search.png`,
+    black: `${process.env.REACT_APP_BASE_PATH}/images/search-b.png`,
   };
   const [image, setImage] = useState(images.white);
   const [hideCard, setHide] = useState(true);

@@ -16,7 +16,7 @@ const defaultProps = {
 
 const VoteButton = (props) => {
   const { type, handleClick, count } = props;
-  const imagePath = type === 'like' ? '/images/tup.svg' : '/images/tdown.svg';
+  const imagePath = type === 'like' ? `${process.env.REACT_APP_BASE_PATH}/images/tup.svg` : `${process.env.REACT_APP_BASE_PATH}/images/tdown.svg`;
   const handClassnames = cx({
     'vote-button__hand': true,
     'vote-button__hand--dislike': type === 'dislike',

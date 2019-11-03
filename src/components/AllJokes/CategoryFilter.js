@@ -41,7 +41,7 @@ const CategoryFilter = (props) => {
         buttonType="all"
         title="view all"
         handleOnClick={() => (handleOnClick('all'))}
-        iconPath="/images/arrow-d.png"
+        iconPath={`${process.env.REACT_APP_BASE_PATH}/images/arrow-d.png`}
       />
     </div>,
   );
@@ -52,7 +52,7 @@ const CategoryFilter = (props) => {
           buttonType="all"
           title="Categories"
           handleOnClick={() => toggleCategories(!showCategories)}
-          iconPath="/images/arrow-d.png"
+          iconPath={`${process.env.REACT_APP_BASE_PATH}/images/arrow-d.png`}
         />
       </div>
       {buttons}

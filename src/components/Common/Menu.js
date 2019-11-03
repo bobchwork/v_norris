@@ -30,9 +30,9 @@ const Menu = (props) => {
         <a href="/">SO FUNKTIONIERT&rsquo;S</a>
         <a href="/">SONDERANGEBOTE</a>
         <a href="/" onMouseEnter={() => toggleBox(false)}>
-          <img src="/images/man-shape.png" alt="mein bereich" />
+          <img src={`${process.env.REACT_APP_BASE_PATH}/images/man-shape.png`} alt="mein bereich" />
           MEIN BEREICH
-          <img src="/images/path-down.png" alt="mein berich" />
+          <img src={`${process.env.REACT_APP_BASE_PATH}/images/path-down.png`} alt="mein berich" />
         </a>
         <Card
           content={list}
@@ -48,7 +48,7 @@ const Menu = (props) => {
           onClick={() => (props.toggle())}
           role="button"
         >
-          <img className="main-navigation__burger" src="/images/burger.png" alt="menu" />
+          <img className="main-navigation__burger" src={`${process.env.REACT_APP_BASE_PATH}/images/burger.png`} alt="menu" />
         </div>
       </div>
     </div>

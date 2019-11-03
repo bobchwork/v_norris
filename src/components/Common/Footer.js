@@ -10,7 +10,7 @@ const Footer = () => (
       </p>
       <span className="footer__submit">
         <h3>SUBMIT JOKE</h3>
-        <img src="/images/arrow-r.png" alt="submit joke" />
+        <img src={`${process.env.REACT_APP_BASE_PATH}/images/arrow-r.png`} alt="submit joke" />
       </span>
     </div>
   </footer>

@@ -49,13 +49,13 @@ export const vote = (selectedJoke, type) => {
 export const getAllJokes = () => {
   store.dispatch({
     type: actionTypes.GET_ALL_JOKES,
-    payload: axios.get('/api/jokes/search?query=all'),
+    payload: axios.get('https://api.chucknorris.io/jokes/search?query=all'),
   });
 };
 
 export const getCategories = () => {
   store.dispatch({
     type: actionTypes.GET_CATEGORIES,
-    payload: axios.get('/api/jokes/categories'),
+    payload: axios.get('https://api.chucknorris.io/jokes/categories'),
   });
 };

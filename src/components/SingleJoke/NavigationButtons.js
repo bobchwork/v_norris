@@ -12,7 +12,7 @@ const NavigationButtons = (props) => (
     <Button
       buttonType="joke-nav"
       title="prev joke"
-      iconPath="/images/arrow-left.svg"
+      iconPath={`${process.env.REACT_APP_BASE_PATH}/images/arrow-left.svg`}
       iconPosition="left"
       border
       handleOnClick={props.previousJoke}
@@ -21,7 +21,7 @@ const NavigationButtons = (props) => (
     <Button
       buttonType="joke-nav"
       title="next joke"
-      iconPath="/images/arrow-right.svg"
+      iconPath={`${process.env.REACT_APP_BASE_PATH}/images/arrow-right.svg`}
       iconPosition="right"
       border
       handleOnClick={props.nextJoke}

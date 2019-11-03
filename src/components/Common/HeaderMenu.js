@@ -33,7 +33,7 @@ const HeaderMenu = () => {
               <Link to="/">
                 <img
                   className="header-menu header-menu__logo"
-                  src="/images/logo-v.png"
+                  src={`${process.env.REACT_APP_BASE_PATH}/images/logo-v.png`}
                   alt="logo"
                 />
               </Link>

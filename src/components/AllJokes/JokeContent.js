@@ -31,7 +31,7 @@ const JokeContent = (props) => {
         <Link to={`/joke/${id}`}>
           SEE STAT
           <span>
-            <img src="/images/arrow-r.png" alt="see stat" />
+            <img src={`${process.env.REACT_APP_BASE_PATH}/images/arrow-r.png`} alt="see stat" />
           </span>
         </Link>
 
