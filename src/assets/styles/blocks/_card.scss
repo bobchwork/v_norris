@@ -47,7 +47,7 @@
     max-height: 269px;
     overflow: auto;
     &--display {
-     max-height: 369px;
+     max-height: 390px;
     }
   }
 
@@ -79,6 +79,11 @@
     position: absolute;
     float: left;
     padding: 0px 20px 0;
+    &:not(:hover) {
+      .main-navigation__dropdown-content {
+        display: none;
+      }
+    }
   }
 
   &--messagebox {

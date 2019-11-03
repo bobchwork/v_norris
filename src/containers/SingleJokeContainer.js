@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { toastr } from 'react-redux-toastr';
 import {
   vote,
   getAllJokes,
@@ -74,8 +75,9 @@ class SingleJokeContainer extends Component {
     const { votedIds, selectedJoke } = this.props;
     if (!votedIds.includes(selectedJoke.id)) {
       vote(selectedJoke, type);
+      toastr.success('Voted', 'Cool! this joke has your vote.');
     } else {
-      alert('You already voted this joke');
+      toastr.error('Error', 'You already voted for this joke.');
     }
   }
 

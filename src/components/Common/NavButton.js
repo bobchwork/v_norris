@@ -26,7 +26,7 @@ const NavButton = (props) => {
         onClick={() => (handleOnClick())}
         role="button"
       >
-        <img src="/images/arrow-left.png" alt={type} />
+        <img src={`${process.env.REACT_APP_BASE_PATH}/images/arrow-left.png`} alt={type} />
       </div>
       <div className="nav-button__back-mb-button">
         <Button
