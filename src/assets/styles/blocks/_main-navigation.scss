@@ -54,6 +54,9 @@
       z-index: 1;
     }
   }
+  &__mobile-submenu-content {
+    display: none;
+  }
   @media screen and (max-width: $desktop-cutoff) {
     &__mobile-menu-content {
       display: none;
@@ -66,6 +69,18 @@
       &--show {
         display: block;
       }
+    }
+    &__mobile-submenu-content {
+      display: none;
+      a {
+        padding-left: 50px !important;
+        width: calc(100% - 60px) !important;
+      }
+      &--show {
+        display: block;
+      }
+
+
     }
     &__desktop {
       display: none;

@@ -6,24 +6,44 @@ import List from './List';
 
 const HeaderMenu = () => {
   const [showMbMenu, toggleMbMenu] = useState(false);
-  const menuListLv1 = (
-    <>
-      <a href="/">SO FUNKTIONIERT&lsquo;`S</a>
-      <a href="/">SONDERANGEBOTE</a>
-      <a href="/">
-        MEIN BEREICH
-      </a>
-    </>
-  );
+  const [showSubMenu, toggleSubMenu] = useState(false);
+  const toggleMobileSubMenu = (e) => {
+    e.preventDefault();
+    toggleSubMenu(!showSubMenu);
+  };
+
+  const toggleMenu = () => {
+    toggleMbMenu(!showMbMenu);
+    toggleSubMenu(false);
+  };
+
+  const mobileSubMenuClasses = cx({
+    'main-navigation__mobile-submenu-content': true,
+    'main-navigation__mobile-submenu-content--show': showSubMenu,
+  });
+
   const mobileClasses = cx({
     'main-navigation__mobile-menu-content': true,
     'main-navigation__mobile-menu-content--show': showMbMenu,
   });
-
-  const toggleMenu = () => {
-    toggleMbMenu(!showMbMenu);
-  };
-
+  const menuListLv1 = (
+    <>
+      <a href="/">SO FUNKTIONIERT&lsquo;S</a>
+      <a href="/">SONDERANGEBOTE</a>
+      <a
+        href="/"
+        onClick={(e) => toggleMobileSubMenu(e)}
+      >
+        MEIN BEREICH
+      </a>
+      <div className={mobileSubMenuClasses}>
+        <a href="/" alt="link">My pubished jokes</a>
+        <a href="/" alt="link">My saved jokes</a>
+        <a href="/" alt="link">Account information</a>
+        <a href="/" alt="link">Publish new joke</a>
+      </div>
+    </>
+  );
   return (
     <>
       <header className="header-menu">
