@@ -47,7 +47,8 @@
     max-height: 269px;
     overflow: auto;
     &--display {
-     max-height: 390px;
+      max-height: 369px;
+      overflow: hidden;
     }
   }
 
@@ -109,6 +110,9 @@
     max-width: 360px;
     max-height: 264px;
     margin: 34px auto auto;
+    animation:1s ease 0s normal forwards .5 fadein;
+    -webkit-animation:1s ease 0s normal forwards .5 fadein;
+    opacity:1;
     &:hover {
       box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
     }
@@ -116,6 +120,9 @@
 
   &--dislpay {
     height: 369px;
+    animation:1s ease 0s normal forwards .5 fadein;
+    -webkit-animation:1s ease 0s normal forwards .5 fadein;
+    opacity:1;
     &:hover {
       box-shadow: none;
     }

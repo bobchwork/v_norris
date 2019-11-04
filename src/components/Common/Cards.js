@@ -64,7 +64,7 @@ const Cards = (props) => {
       && (
         <div className="cards__message">
           <p>
-            No Jokes for
+            No Jokes for &nbsp;
             {selectedCategory}
             ..
           </p>
