@@ -42,8 +42,6 @@ App.defaultProps = defaultProps;
 
 export default connect(
   (state) => ({
-    isLoading: state.isLoading,
-    selectedCategory: state.jokes.selectedCategory,
     jokes: state.jokes.list,
   }),
   {},

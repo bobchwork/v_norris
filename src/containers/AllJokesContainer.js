@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {
   getAllJokes,
   getCategories,
@@ -26,8 +27,8 @@ class AllJokesContainer extends Component {
   }
 
   componentDidMount() {
-    getAllJokes();
-    getCategories();
+    this.props.getAllJokes();
+    this.props.getCategories();
   }
 
   componentDidUpdate(prevProps) {
@@ -56,7 +57,7 @@ class AllJokesContainer extends Component {
     const jokeIndex = viewMore ? this.state.displayJokeIndex + 3 : this.resetDisplayIndex();
     const filteredList = type === 'all' ? jokes.list : filterJokes(type, jokes.list);
     const slicedJokesList = filteredList.slice(0, jokeIndex);
-    updateSelectedCategory(type);
+    this.props.updateSelectedCategory(type);
     this.setState({
       jokesToDisplay: slicedJokesList,
       displayJokeIndex: jokeIndex,
@@ -96,6 +97,21 @@ class AllJokesContainer extends Component {
   }
 }
 
+/*
+const mapDispatchToProps = (dispatch) => ({
+  action1: some_payload => dispatch(action1(some_payload))
+  action2: some_payload => dispatch(action2(some_payload))
+})
+*/
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+    ...bindActionCreators({ updateSelectedCategory, getCategories, getAllJokes }, dispatch)
+  }
+}
+
+
 export default connect(
   (state) => ({
     jokes: state.jokes,
@@ -103,9 +119,5 @@ export default connect(
     categoryList: state.jokes.categories,
     selectedCategory: state.jokes.selectedCategory,
   }),
-  {
-    updateSelectedCategory,
-    getCategories,
-    getAllJokes,
-  }
+  mapDispatchToProps,
 )(AllJokesContainer);

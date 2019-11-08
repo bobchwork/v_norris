@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 import { toastr } from 'react-redux-toastr';
 import {
@@ -35,16 +36,17 @@ class SingleJokeContainer extends Component {
     const { match, jokes: { list } } = this.props;
     const id = match.params.id;
     if (list.length < 1) {
-      getAllJokes();
+      this.props.getAllJokes();
+    } else {
+      this.props.getJoke(id);
     }
-    getJoke(id);
   }
 
   componentDidUpdate(prevProps) {
     const { match } = this.props;
     const id = match.params.id;
     if (prevProps.jokes.list < 1 || (prevProps.match.params.id !== id)) {
-      getJoke(id);
+      this.props.getJoke(id);
     }
   }
 
@@ -74,7 +76,7 @@ class SingleJokeContainer extends Component {
   voteJoke(type) {
     const { votedIds, selectedJoke } = this.props;
     if (!votedIds.includes(selectedJoke.id)) {
-      vote(selectedJoke, type);
+      this.props.vote(selectedJoke, type);
       toastr.success('Voted', 'Cool! this joke has your vote.');
     } else {
       toastr.error('Error', 'You already voted for this joke.');
@@ -140,15 +142,19 @@ class SingleJokeContainer extends Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+    ...bindActionCreators({ getJoke, vote, getAllJokes }, dispatch)
+  }
+}
+
 export default withRouter(connect(
   (state) => ({
     jokes: state.jokes,
     votedIds: state.jokes.votedIds,
     selectedJoke: state.jokes.selectedJoke,
     isLoading: state.isLoading,
-  }), {
-    getJoke,
-    vote,
-    getAllJokes,
-  }
+  }),
+  mapDispatchToProps
 )(SingleJokeContainer));

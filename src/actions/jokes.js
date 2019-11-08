@@ -3,17 +3,10 @@ import store from '../config/store';
 import * as actionTypes from './actionTypes';
 
 export const updateSelectedCategory = (category) => {
-  store.dispatch({
+  return {
     type: actionTypes.UPDATE_SELECTED_CATEGORY,
     payload: category,
-  });
-};
-
-const selectJoke = (joke) => {
-  store.dispatch({
-    type: actionTypes.GET_JOKE,
-    payload: joke,
-  });
+  };
 };
 
 export const getJoke = (jokeId) => {
@@ -22,7 +15,11 @@ export const getJoke = (jokeId) => {
     return;
   }
   const joke = list.find((j) => (j.id === jokeId));
-  selectJoke(joke);
+
+  return {
+    type: actionTypes.GET_JOKE,
+    payload: joke,
+  };
 };
 
 export const vote = (selectedJoke, type) => {
@@ -40,22 +37,22 @@ export const vote = (selectedJoke, type) => {
     }
     return joke;
   });
-  store.dispatch({
+  return {
     type: actionTypes.UPDATE_VOTES,
     payload: { updatedList, id: selectedJoke.id },
-  });
+  };
 };
 
 export const getAllJokes = () => {
-  store.dispatch({
+  return {
     type: actionTypes.GET_ALL_JOKES,
     payload: axios.get('https://api.chucknorris.io/jokes/search?query=all'),
-  });
+  };
 };
 
 export const getCategories = () => {
-  store.dispatch({
+  return {
     type: actionTypes.GET_CATEGORIES,
     payload: axios.get('https://api.chucknorris.io/jokes/categories'),
-  });
+  };
 };
