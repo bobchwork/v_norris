@@ -97,13 +97,6 @@ class AllJokesContainer extends Component {
   }
 }
 
-/*
-const mapDispatchToProps = (dispatch) => ({
-  action1: some_payload => dispatch(action1(some_payload))
-  action2: some_payload => dispatch(action2(some_payload))
-})
-*/
-
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
